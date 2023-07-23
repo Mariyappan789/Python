@@ -1,0 +1,5489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problems</title>
+</head>
+<body>
+    <h1><mark>1 . How to print square in each element in list?</mark></h1>
+
+
+<pre>
+    
+1) 
+
+def square(a):                 
+    
+
+    for i in a:                 
+    
+        print(i**2,end=",")    
+        
+square([2,4,5,6,7,9])           
+
+#output [4,16,25,36,49,81]
+*********************************************
+<b>#Defining function with one parameter</b>
+<b>#for loop using a value transfer to i</b>
+<b>#print the value i using exponentiation 2 , and end of parameter with comma</b> 
+<b>#calling function</b>     
+*********************************************
+
+<pre>
+    def square(a):
+    
+    for i in a:
+        
+        print(i**2)
+        
+square([2,3,4,5,6])
+
+</pre>
+2)
+
+def square(list):           
+
+    for i in list:         
+
+        yield i**2          
+list =[2,4,6,7,8,9]        
+
+for gen in square(list):    
+
+    print(gen)              
+**********************************************************************************************
+#<b>Defining function</b>
+#<b>using generator gave value from loop then using power</b>
+#<b>input</b>
+#<b>using for loop for get function value convert to iterator</b>
+#<b>print the value iterator</b>
+ **********************************************************************************************
+ 
+ 
+ <pre>
+****************************************************************************
+    def square(a):
+    
+    for i in a:
+        
+        yield i**2
+        
+a = [2,3,4,56,6]
+
+square(a)
+
+for gen in square(a):
+    print(gen)
+ </pre>
+
+ ***************************************************************************8
+
+ <pre>
+    def square(a):
+    
+    for i in a:
+        
+        yield i**2
+        
+a = [2,3,4,56,6]
+
+x=square(a)
+
+print(next(x))
+print(next(x))
+*****************************************************************************
+ </pre>
+3)
+
+
+
+# Generator
+
+def square(list):   
+    
+    for i in list:  
+       
+        yield i**2  
+
+list =[2,4,6,7,8,9]  
+
+x = square(list)    
+
+print(next(x))      
+print(next(x))
+print(next(x))
+print(next(x))
+print(next(x))
+******************************************************************************
+#<b>defineing function  with passing one parameter</b>
+#<b>using for loop </b>
+#<b>Using generator with yield keyword and using exponential expression 2</b>
+#<b>input</b>
+#<b>create one variable assign value function</b>
+#<b>print the next value in a variable</b>
+*******************************************************************************
+
+
+4)
+<pre>
+
+lis1 = [2,4,5,6,7,8]
+
+square = [i**2 for i in lis1]
+
+print(square)
+
+#output[4, 16, 25, 36, 49, 64]
+
+</pre>
+
+
+
+
+5)
+
+lis1 = [2,4,5,6,7,8]     # <b>Given input</b>
+
+square = list(map(lambda x:x**2,lis1)) 
+
+print(square)  
+
+
+***********************************************************************************************
+#<b>create one variable using list datatype </b>
+#<b>using map(function ,*iterator) = map object
+#<b>Make an iterator that computes the function using arguments from each of the iterables. </b>
+#<b>Stops when the shortest iterable is exhausted.</b>
+#<b> Example   :      x = lambda a, b : a * b</b>
+#<b>                  print(x(5, 6))</b>
+
+#<b>map(function,iterator)</b>
+#<b>function = lambda x:x**2</b>
+#<b>iterator = input value(lis1)</b>
+
+#<b>print variable</b>
+
+****************************************************************************************************************************************
+
+
+<pre>
+    lis1 = [2,3,45,4,6]
+
+    square = list(map(lambda x:x**2,lis1))
+
+    print(square)
+
+    output :  [4, 9, 2025, 16, 36]
+</pre>
+
+**********************************************************
+
+6)
+
+
+<pre>
+
+   
+    square = [i**i for i in range(5)]
+
+    print(square)
+    
+    #output :- [1, 1, 4, 27, 256]
+    
+    
+    for i in square:                      
+        print(i)
+
+</pre>
+*********************************************************
+
+#<b>  create the generator object</b>
+#<b>iterate over the generator and print the values</b>
+
+
+**********************************************************
+
+
+
+7)
+<pre>
+def func(n):
+    return n*n
+    
+num = (2,3,4,5,6)
+
+out = map(func , num)
+
+print(list(out))
+
+
+#output :-[4, 9, 16, 25, 36]
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>2) Add two given list using map and lambda</mark> </h1>
+
+<pre>
+    
+l1 = [1,2,3,4]                              
+                                            
+
+l2 =[3,4,5,6]
+
+result = map(lambda x,y :x+y,l1,l2)
+
+print(result())
+
+
+
+**************************************************************************
+#<b>using map(function ,*iterator) = map object
+#<b>Make an iterator that computes the function using arguments from each of the iterables. </b>
+#<b>Stops when the shortest iterable is exhausted.</b>
+#<b> Example   :      x = lambda a, b : a * b</b>
+#<b>                  print(x(5, 6))</b>
+
+#<b>map(function,iterator)</b>
+
+
+
+*************************************************************************8
+</pre>
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark> 3. How to access dictionary keys and values ?</mark></h1>
+
+<pre>
+   
+
+dict = {'name':'Mariyappan','age':29,'Location':'Chennai'}
+
+for i , j in dict.items():
+    print(i,j)
+
+<b>OUTPUT  </b>
+
+name Mariyappan
+age 29
+Location Chennai
+</pre>
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>4.Check if the first number and last number of a list is the same or not?</mark></h1>
+
+<pre><h2>
+
+    a = [2,3,4,5,6,7]
+
+    def func(a):
+        
+        first = a[0]
+        
+        last  = a[-1]
+        
+        if first==last:
+            
+            return True
+            
+        else:
+            return False
+            
+    print(func(a))
+    
+    
+    #output = False
+</h2>
+</pre>
+
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>5.How to check Number positive or Negative?</mark></h1>
+
+<pre>
+    num = int(input("Enter the Number : "))
+
+    if num < 0:
+        
+        print("This is Negative Value ")
+        
+    elif num > 1:
+        
+        print("This is Positive value")
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>6.Finding given number Even or Odd ?</mark></h1>
+
+<pre>
+    num = int(input("Enter the value"))
+
+    var = num%2
+    
+    if var==0:
+        
+        print(num,"number is Even")
+        
+    elif var!=0:
+        
+        print(num,"Number is Odd")
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>7.Code for find alphabet are not</mark></h1>
+
+<pre>
+    alpha = str(input("Enter the value"))
+
+    if (alpha >= 'a' and alpha <= 'z'):
+        
+        print(alpha , "is Alphabet")
+        
+    else:
+        
+        print(alpha , "is not alphabet")
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>8.How many number find average ?</mark></h1>
+
+<pre>
+    num = int(input("Enter how many number want : "))
+
+    a = []
+    
+    for i in range(0,num):
+        
+        var = int(input("Enter the Number : "))
+        
+        a.append(var)
+        
+    average = sum(a)/num
+    
+    print("Average value is :  ", average)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>9.Print all numbers in a range that are divisible by given number ?</mark></h1>
+
+
+<pre>
+    start = int(input("Enter the starting number : "))
+
+    end  = int(input("Enter the ending number  : "))
+    
+    num = 2
+    
+    for i in range(start,end+1):
+        
+        if(num%i==0):
+            
+            print("div number is : ", i)
+            
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>10. How to find largest among three inputs ?</mark></h1>
+
+<pre>
+    a = int(input("Enter the a value :"))
+
+    b = int(input("Enter the b value :"))
+    
+    c = int(input("Enter the c value :"))
+    
+    
+    if (a>=b) and (a>=c):
+        
+        print("Large number a  :", a)
+        
+    elif (b>=a) and (b>=c):
+        
+        print("Large number is b :",b)
+        
+    else:
+        
+        print("Large number is c : ",c)
+
+</pre>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>11.How to find sum of natural numbers ?</mark></h1>
+
+<pre>
+    num = int(input("Enter the natural Number : "))
+
+    if num < 0 :
+        
+        print("Please Enter positive Number : ")
+        
+    else:
+        
+        val = 0
+        
+        while (num>0):
+            
+            val = val+num 
+            
+            num = num-1
+     
+    print(num)       
+    print("The sum is : ",val)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>12.How to factorial of a number ?</mark></h1>
+
+<pre>
+    num = int(input("Enter the number  : "))
+
+    factorial = 1
+    
+    if num < 0:
+        
+        print("Negative value")
+        
+    elif num ==0:
+        
+        print("factorial is 0",num)
+        
+    else:
+        
+        for i in range(1,num+1):
+            
+            factorial *=i
+            
+            print(factorial)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>13.How to remove duplicate from list ?</mark></h1>
+<pre>
+
+1)
+
+lis1 = [1,3,4,56,6,5,3,2,4,5,3,4,5,3,1]
+
+print("After removing Duplicate :" , list(set(lis1) ))
+
+
+2)
+lis1 = [1,2,3,4,3,22,3]
+
+lis2 = [1,2,7,8,97,5,3]
+
+print(list(set(lis2)^set(lis1)))  # removing duplicates
+
+print(list(set(lis2)&set(lis1)))  # only Duplicates
+
+
+3)
+
+
+lis = [1,2,3,2,3,2,3,3,2,5,6,7,6,5,3,2,8,3]
+lis2 =[]
+
+for i in lis:
+
+    if i not in lis2:
+
+        lis2.append(i)
+
+print(lis2)
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>14.Write a programme to find the sum of the element in the list ?</mark></h1>
+
+
+<pre>
+    lis = [2,3,4,5,6,7,8]
+
+    sum = 0
+    
+    for i in lis:
+
+        sum +=i
+
+        print("The sum :",sum)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>15.Find the list consist of atleast one common element ?</mark></h1>
+
+<pre>
+
+    lis1 = [2,4,3,5,6,7]
+
+    lis2 = [4,3,2,1,8,9]
+    
+    for x in lis1:
+
+        for y in lis2:
+
+            if x ==y:
+
+                print("Common List :", x)
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>16.print all items by referring to their index number?</mark></h1>
+
+<pre>
+    a = []
+    n= int(input("Enter the value :"))
+
+    for i in range(1,n+1):
+
+        b = int(input("Enter the value :"))
+
+        a.append(b)
+
+        a.sort()
+
+    print("Largest number :",a[n-1])
+
+
+</pre>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>17.Calculate lower case and upper case in this string ?</mark></h1>
+
+<pre>
+    
+d = {'upper_case':0,'lower_case':0} 
+
+
+def string(s):
+   
+   
+    for i in s:
+
+        if i.isupper():
+
+            d['upper_case']+=1
+
+        elif i.islower():
+
+            d['lower_case']+=1
+
+        else:
+
+            pass
+
+print("Upper case  :",d['upper_case'])
+
+print("Lower_case  :",d['lower_case'])
+
+string(s="mariyappam" )
+
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>18.Extend a list without append ?</mark></h1>
+<pre>
+l1 = [1,2,3,4]
+l2 = [3,4,5,6]
+
+l1[:0]=l2
+print(l1)
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>18.Check whether a given number is even or odd using recursion ?</mark></h1>
+
+<pre>
+
+    def check(n):
+    
+    if(n<2):
+        
+        return (n%2==0)
+        
+    return (check(n-2))
+    
+n = int(input("Enter the value : "))
+
+if (check(n)==True):
+    
+    print("Number is even")
+    
+else:
+    
+    print("Number is odd")
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>19.Return the Sum of Two Numbers in python</mark></h1>
+
+<pre>
+
+    def sum_number(a,b):
+    return a+b
+print(sum_number(2,5))
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>20.Return the Next Number from the Integer Passed in python</mark></h1>
+
+<pre>
+    def get_next_number(number):
+    return number + 1
+
+# Example usage
+num = 5
+next_num = get_next_number(num)
+print(next_num)  # Output: 6
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>21. Convert Minutes into Seconds in python</mark></h1>
+
+<pre>
+    def convert_minutes_to_seconds(minutes):
+    return minutes * 60
+
+# Example usage
+minutes = 5
+seconds = convert_minutes_to_seconds(minutes)
+print(seconds)  # Output: 300
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>22.Area of a Triangle in python</mark></h1>
+
+<pre>
+    def calculate_triangle_area(base, height):
+    area = (base * height) / 2
+    return area
+
+# Example usage
+base_length = 5
+height_length = 8
+triangle_area = calculate_triangle_area(base_length, height_length)
+print(triangle_area)  # Output: 20.0
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>23.Convert Hours into Seconds in python</mark></h1>
+
+<pre>
+    def convert_hours_to_seconds(hours):
+    return hours * 3600
+
+# Example usage
+hours = 2
+seconds = convert_hours_to_seconds(hours)
+print(seconds)  # Output: 7200
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>24.Return the First Element in a List in python</mark></h1>
+
+<pre>
+    def get_first_element(lst):
+    return lst[0]
+
+# Example usage
+my_list = [1, 2, 3, 4, 5]
+first_element = get_first_element(my_list)
+print(first_element)  # Output: 1
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>25.Find the Smallest Number in a List in python</mark></h1>
+
+<pre>
+    def find_smallest_number(lst):
+    return min(lst)
+
+# Example usage
+my_list = [5, 2, 8, 3, 1]
+smallest_number = find_smallest_number(my_list)
+print(smallest_number)  # Output: 1
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>26.How Many Digits between 1 and N in python</mark></h1>
+
+<pre>
+    def count_digits_between_1_and_N(N):
+    count = 0
+    for num in range(1, N + 1):
+        count += len(str(num))
+    return count
+
+# Example usage
+N = 10
+digit_count = count_digits_between_1_and_N(N)
+print(digit_count)  # Output: 11
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>26.Recursion: Reversed List Index in python</mark></h1>
+
+<pre>
+    def reversed_list_index(lst, target, index=-1):
+    if index < -len(lst):
+        return -1
+    if lst[index] == target:
+        return len(lst) + index
+    return reversed_list_index(lst, target, index - 1)
+
+# Example usage
+my_list = [4, 2, 6, 1, 8, 3]
+target_element = 6
+reversed_index = reversed_list_index(my_list, target_element)
+print(reversed_index)  # Output: 2
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>27.Numbers in Strings in python</mark></h1>
+
+<pre>
+    string = "The number is 42"
+    number = int(''.join(filter(str.isdigit, string)))
+    print(number)  # Output: 42
+
+
+</pre>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>28.Find First Character That Repeats in python</mark></h1>
+
+<pre>
+    def find_first_repeating_character(string):
+    var = set()
+    for char in string:
+        if char in var:
+            return char
+        var.add(char)
+    return None
+
+# Example usage
+input_string = "abcaed"
+first_repeating_char = find_first_repeating_character(input_string)
+print(first_repeating_char)  # Output: 'a'
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>29.English to Numbers in python</mark></h1>
+<pre>
+    def convert_english_to_number(english_word):
+    number_mapping = {
+        "zero": 0,
+        "one": 1,
+        "two": 2,
+        "three": 3,
+        "four": 4,
+        "five": 5,
+        "six": 6,
+        "seven": 7,
+        "eight": 8,
+        "nine": 9
+    }
+    return number_mapping.get(english_word.lower(), None)
+
+# Example usage
+word = "Three"
+number = convert_english_to_number(word)
+print(number)  # Output: 3
+
+
+
+
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>30.Remove The Word in python</mark></h1>
+
+<pre>
+    def remove_word(string, word):
+    
+    return string.replace(word, "")
+
+# Example usage
+
+input_string = "Hello, world! This is an example."
+
+word_to_remove = "example"
+
+modified_string = remove_word(input_string, word_to_remove)
+
+print(modified_string)  # Output: "Hello, world! This is an ."
+
+
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h2><mark>31.Sort by the Letters in python</mark></h2>
+
+<pre>
+    def sort_by_letters(strings):
+    return sorted(strings, key=lambda s: sorted(s))
+
+# Example usage
+
+string_list = ['banana', 'apple', 'cherry', 'date']
+
+sorted_list = sort_by_letters(string_list)
+
+print(sorted_list)  # Output: ['apple', 'banana', 'cherry', 'date']
+
+
+
+
+2)
+
+
+my_list = ['banana', 'apple', 'cherry', 'date']
+
+sorted_list = sorted(my_list)     # Using sorted() function
+
+print(sorted_list)
+
+# Using list.sort() method
+my_list = ['banana', 'apple', 'cherry', 'date']
+my_list.sort()
+print(my_list)
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>32.Add Two String Numbers in python</mark></h1>
+
+<pre>
+    def add_string_numbers(num1, num2):
+    result = int(num1) + int(num2)
+    return str(result)
+
+# Example usage
+string_num1 = "123"
+string_num2 = "456"
+sum_string = add_string_numbers(string_num1, string_num2)
+print(sum_string)  # Output: "579"
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>33.Count Missing Numbers in python</mark></h1>
+
+<pre>
+    def count_missing_numbers(numbers):
+    complete_set = set(range(min(numbers), max(numbers) + 1))
+    input_set = set(numbers)
+    missing_numbers = complete_set - input_set
+    return len(missing_numbers)
+
+# Example usage
+number_list = [1, 2, 4, 6, 8]
+missing_count = count_missing_numbers(number_list)
+print(missing_count)  # Output: 4
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>34.example of a generator function that produces a sequence of numbers,</mark></h1>
+
+<pre>
+    def my_generator(n):
+
+    # initialize counter
+    value = 0
+
+    # loop until counter is less than n
+    while value < n:
+
+        # produce the current value of the counter
+        yield value
+
+        # increment the counter
+        value += 1
+
+# iterate over the generator object produced by my_generator
+for value in my_generator(3):
+
+    # print each value produced by generator
+    print(value)
+
+
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>35.example to implement a sequence of power of 2 using an iterator class ?</mark></h1>
+
+<pre>
+    class PowTwo:
+    def __init__(self, max=0):
+        self.n = 0
+        self.max = max
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.n > self.max:
+            raise StopIteration
+
+        result = 2 ** self.n
+        self.n += 1
+        return result
+</pre>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><mark>36.Write a program to print the table of the given number using the generator.</mark></h1>
+
+<pre>
+def table(a):
+    
+    for i in range(1,11):
+        
+        yield a*i
+        
+        i = i+1
+        
+for i in table(15):
+    
+    print(i)
+</pre>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>37.Python Class Iterator Implementation</mark></h1>
+
+<pre>
+    class get_odds:
+    def __init__(self, max):
+        self.n=3
+        self.max=max
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.n <= self.max:
+            result = self.n
+            self.n += 2
+            return result
+        else:
+            raise StopIteration
+numbers = get_odds(10)
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+# Output
+3
+5
+7
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>38.Python Generator Implementation </mark></h1>
+
+<pre>
+    def get_odds_generator():
+    n=1
+    
+    n+=2
+    yield n
+    
+    n+=2
+    yield n 
+    
+    n+=2
+    yield n
+    
+numbers=get_odds_generator()
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+# Output
+3
+5
+7
+
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<h1><mark>39. Python generator return odd numbers until a certain max number.</mark></h1>
+
+<pre>
+    def get_odds_generator(max):
+    n=1
+    
+    while n<=max:
+        yield n
+        n+=2
+    
+numbers=get_odds_generator(3)
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>40.</mark></h1>
+
+<pre>
+    def infinite():
+    n = 0
+    while True:
+        yield n
+        n += 1
+        
+for i in infinite():
+    if i%4 == 0:
+        continue
+    elif i == 13:
+        break
+    else:
+        print(i)
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>41.generar </mark></h1>
+
+<pre>
+    def simple_generator():
+    num = 1
+    print(f"{num} -- This is first")
+    yield num
+
+    num += 1
+    print(f"{num} -- This is second")
+    yield num
+
+    num += 1
+    print(f"{num} -- This is third and the last")
+    yield num
+
+
+gen = simple_generator()
+next(gen)
+next(gen)
+next(gen)
+next(gen)
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>42.</mark></h1>
+<pre>
+    def reverse_string(string):
+    length = len(string)
+    for el in range(length - 1, -1, -1):
+        yield string[el]
+
+
+for word in reverse_string("hello"):
+    print(word)
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>43.</mark></h1>
+<pre>
+    list_numbers = [10, 18, 13, 23]
+list_square = [x**2 for x in list_numbers]
+
+generator = (x**2 for x in list_numbers)
+
+print(list_square)
+print(generator)
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>44.</mark></h1>
+<pre>
+    list_numbers = [10, 18, 13, 23]
+    generator = (x**2 for x in list_numbers)
+    
+    print(next(generator))
+    print(next(generator))
+    print(next(generator))
+    print(next(generator))
+    next(generator)
+
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>45.</mark></h1>
+<pre>
+    class PowTwo:
+    def __init__(self, max=0):
+        self.number = 0
+        self.max = max
+
+    def __iter__(self):
+        return self
+        
+    def __next__(self):
+        if self.number > self.max:
+            raise StopIteration
+        result = 2**self.number
+        self.number += 1
+        return result 
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>46.Decor</mark></h1>
+<pre>
+    def hello_decorator(func):
+    def inner1(*args, **kwargs):
+         
+        print("before Execution")
+         
+        # getting the returned value
+        returned_value = func(*args, **kwargs)
+        print("after Execution")
+         
+        # returning the value to the original frame
+        return returned_value
+         
+    return inner1
+ 
+ 
+# adding decorator to the function
+@hello_decorator
+def sum_two_numbers(a, b):
+    print("Inside the function")
+    return a + b
+ 
+a, b = 1, 2
+ 
+# getting the value through return of the function
+print("Sum =", sum_two_numbers(a, b))
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>47.dec1</mark></h1>
+
+<pre>
+    # code for testing decorator chaining
+    def decor1(func):
+        def inner():
+            x = func()
+            return x * x
+        return inner
+     
+    def decor(func):
+        def inner():
+            x = func()
+            return 2 * x
+        return inner
+     
+    @decor1
+    @decor
+    def num():
+        return 10
+     
+    @decor
+    @decor1
+    def num2():
+        return 10
+       
+    print(num())
+    print(num2())
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>48.dec</mark></h1>
+
+<pre>
+    def smart_divide(func):
+    def inner(a, b):
+        print("I am going to divide", a, "and", b)
+        if b == 0:
+            print("Whoops! cannot divide")
+            return
+
+        return func(a, b)
+    return inner
+
+@smart_divide
+def divide(a, b):
+    print(a/b)
+
+divide(2,5)
+
+divide(2,0)
+
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>49.dec</mark></h1>
+
+<pre>
+
+    def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 15)
+        func(*args, **kwargs)
+        print("*" * 15)
+    return inner
+
+
+def percent(func):
+    def inner(*args, **kwargs):
+        print("%" * 15)
+        func(*args, **kwargs)
+        print("%" * 15)
+    return inner
+
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+
+printer("Hello")
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<li><mark>50.</mark></li>
+
+<pre>
+    def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+
+    return wrapper
+
+
+
+    def say_hi():
+    return 'hello there'
+
+decorate = uppercase_decorator(say_hi)
+decorate()
+
+
+
+@uppercase_decorator
+def say_hi():
+    return 'hello there'
+
+say_hi()
+
+
+
+def split_string(function):
+    def wrapper():
+        func = function()
+        splitted_string = func.split()
+        return splitted_string
+
+    return wrapper
+
+
+
+    @split_string
+    @uppercase_decorator
+    def say_hi():
+        return 'hello there'
+    say_hi()
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>51.de</mark></h1>
+
+<pre>
+    def decorator_with_arguments(function):
+    def wrapper_accepting_arguments(arg1, arg2):
+        print("My arguments are: {0}, {1}".format(arg1,arg2))
+        function(arg1, arg2)
+    return wrapper_accepting_arguments
+
+
+@decorator_with_arguments
+def cities(city_one, city_two):
+    print("Cities I love are {0} and {1}".format(city_one, city_two))
+
+cities("Nairobi", "Accra")
+
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>52. dec</mark></h1>
+
+<pre>
+    # A decorator function takes another function as argument, wraps its behaviour inside
+    # an inner function, and returns the wrapped function.
+    def start_end_decorator(func):
+    
+        def wrapper():
+            print('Start')
+            func()
+            print('End')
+        return wrapper
+    
+    def print_name():
+        print('Alex')
+    
+    print_name()
+    
+    print()
+    
+    # Now wrap the function by passing it as argument to the decorator function
+    # and asign it to itself -> Our function has extended behaviour!
+    print_name = start_end_decorator(print_name)
+    print_name()
+
+
+
+
+
+    @start_end_decorator
+    def print_name():
+        print('Alex')
+    
+    print_name() 
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>53. </mark></h1>
+
+<pre>
+    def start_end_decorator_3(func):
+
+    def wrapper(*args, **kwargs):
+        print('Start')
+        result = func(*args, **kwargs)
+        print('End')
+        return result
+    return wrapper
+
+@start_end_decorator_3
+def add_5(x):
+    return x + 5
+
+result = add_5(10)
+print(result)
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>54.</mark></h1>
+
+<pre>
+    def repeat(num_times):
+    def decorator_repeat(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for _ in range(num_times):
+                result = func(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator_repeat
+
+@repeat(num_times=3)
+def greet(name):
+    print(f"Hello {name}")
+
+greet('Alex')
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>55. </mark></h1>
+
+<pre>
+    def get_function_name_dec(func):
+    def wrapper(*arg):
+        function_returns = func(*arg)  # What our function returns
+        return func.__name__ + ": " + function_returns
+  
+    return wrapper
+  
+  @get_function_name_dec
+  def hello_world():
+      return "Hi"
+  
+  print(hello_world())
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>56. </mark></h1>
+
+<pre>
+
+    def minus_2(func):
+    def core(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result - 2
+    return core
+
+@minus_2 # Here
+def sum(num1, num2):
+    return num1 + num2
+    
+result = sum(4, 6)
+print(result)
+
+
+</pre>
+
+
+<h1><mark>57. </mark></h1>
+
+<pre>
+
+    def minus_2(func):
+    def core(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result - 2
+    return core
+
+def times_10(func):
+    def core(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result * 10
+    return core
+
+@times_10 # Here
+@minus_2
+def sum(num1, num2):
+    return num1 + num2
+
+result = sum(4, 6)
+print(result)
+
+</pre>
+
+
+<br>
+<br>
+<hr>
+<h1><mark>58.Passing two arguments in decorator</mark></h1>
+
+<pre>
+    def func(fun):
+    def outer(*args,**var):
+        result = fun(*args,**var)
+        return result -2
+    return fun
+
+@func
+def sum(num1,num2):
+    return num1+num2
+
+result = sum(2,4)
+print(result)
+
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>59.paasing two arguments in generator ? </mark></h1>
+<pre>
+
+    def gen(x,y):
+    yield x*y
+    yield x+y
+
+x = gen(6,3)
+print(next(x))
+print(next(x))
+
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>60.instance method </mark></h1>
+
+<pre>
+class object():
+
+    def __init__(self,tamil,telugu,english):
+        self.tamil = tamil
+        self.telugu = telugu
+        self.english = english
+
+    def display(self):
+        total = self.tamil+self.telugu+self.english
+     
+        return total
+
+obj=object(20,45,12)
+
+result = obj.display()
+
+print("Total",result)
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>61.Class method </mark></h1>
+<pre>
+    class object():
+
+    method = "This is class method"
+
+    def __init__(self,tamil,telugu,english):
+        self.tamil = tamil
+        self.telugu = telugu
+        self.english = english
+
+    
+    
+    
+    def display(self):
+        total = self.tamil+self.telugu+self.english
+        return total
+    
+    @classmethod  
+    def classmethod(cls):
+        return cls.method 
+
+    def staticmethod():
+        method = "This is static method"
+        return method
+    
+
+obj=object(20,45,12)
+
+result = obj.display()
+
+print("Total",result)
+
+print(object.classmethod())
+
+
+
+
+
+</pre>
+
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>62.static method </mark></h1>
+
+<pre>
+    class object():
+
+    method = "This is class method"
+
+    def __init__(self,tamil,telugu,english):
+        self.tamil = tamil
+        self.telugu = telugu
+        self.english = english
+
+    
+    
+    
+    def display(self):
+        total = self.tamil+self.telugu+self.english
+        return total
+    
+    @classmethod  
+    def classmethod(cls):
+        return cls.method 
+
+    
+    @staticmethod
+    def staticmethod():
+        method = "This is static method"
+        return method
+    
+obj=object(20,45,12)
+
+result = obj.display()
+
+print("Total",result)
+
+print(object.classmethod())
+
+print(object.staticmethod())
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>63. Python Inheritance</mark></h1>
+<pre>
+    Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+    Parent class is the class being inherited from, also called base class.
+    
+    Child class is the class that inherits from another class, also called derived class.
+
+
+
+class Person:
+    def __init__(self, fname, lname):
+      self.firstname = fname
+      self.lastname = lname
+  
+    def printname(self):
+      print(self.firstname, self.lastname)
+  
+  #Use the Person class to create an object, and then execute the print name method:
+  
+  x = Person("John", "Doe")
+  x.printname()
+
+
+
+
+  class Student(Person):
+  pass
+
+
+
+x = Student("Mike", "Olsen")
+x.printname()
+
+
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    #add properties etc.
+
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+  
+  x = Student("Mike", "Olsen", 2019)
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>64.How to print int  ,str  ,float  in list in python </mark></h1>
+<pre>
+    s1 = [1,"two",3.0,"four",5]
+
+    for i in s1:
+        if isinstance(i,int):
+            print(f"{i} is an integer")
+        elif isinstance(i,str):
+            print(f"{i} is a string")
+        elif isinstance(i,float):
+            print(f"{i} is a float")
+        else:
+            print(f"{i} is a bool")
+
+    
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>63.swap in python  </mark></h1>
+<pre>
+
+    x =5 
+    y = 10 
+    temp= x
+    x = y
+    y = temp
+    print("Value of x",x)
+    print("Value of y",y)
+    print("Value of temp",temp)
+
+    <b>output</b>
+
+    Value of x 10
+    Value of y 5
+    Value of temp 5
+
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>64.Arthimatic operator Swap </mark></h1>
+<pre>
+    x = 10
+    y = 10
+    x = x+y  #20
+    
+    y = x-y #10
+    
+    x = x-y #10
+    
+    print("Value of x",x)
+    print("Value of y",y)
+    
+
+    
+</pre>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>63. swap using comma operator </mark></h1>
+<pre>
+    x = 10 
+    y = 50
+    x,y = y ,x
+    print("Value of x",x)
+    print("Value of y",y)
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>64. using xor for swap</mark></h1>
+<pre>
+    x = 10
+    y = 50
+    x = x^y
+    print(x)
+    y = x^y
+    print(y)
+    x = x^y
+    print("Value of x",x)
+    print("Value of y",y)
+
+    
+</pre>
+
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63.How to add multiple list of element convert to single list ? </mark></h1>
+<pre>
+
+    lis1 = [[23,45,65,66],[21,65,76,32],[56,78,98,75]]
+    var=sum(lis1,[])
+    print(var)
+
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>62.?Can you write an efficient code to count the number of capital letters in a list</mark></h1>
+<pre>
+
+    def count_capital_letters(lst):
+    count = 0
+    for item in lst:
+        if isinstance(item, str):
+            for char in item:
+                if char.isupper():
+                    count += 1
+    return count
+Capital=count_capital_letters(lst="MarIYaPPaN")
+
+print(Capital)
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>63. Write a program in Python to produce Star triangle?</mark></h1>
+<pre>
+    def print_star_triangle(rows):
+    for i in range(1, rows + 1):
+        print(' ' * (rows - i), end='')
+       
+
+# Example usage
+rows = 5
+print_star_triangle(rows)
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>64.Write a Python program to count the number 4 in a given list. </mark></h1>
+<pre>
+
+    def func(number):
+    count = 0
+    for i in number:
+        if i == 4:
+            count +=1
+    return count
+        
+lis1 = [1,4,56,89,9]
+
+count  = func(lis1)
+
+print("Count of numbers",count)
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>63.Write a Python program to test whether a passed letter is a vowel or not. </mark></h1>
+<pre>
+
+    def is_vowel(letter):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if letter.lower() in vowels:
+        return True
+    else:
+        return False
+
+# Test the function
+given_letter = input("Enter a letter: ")
+if len(given_letter) == 1:
+    if is_vowel(given_letter):
+        print(given_letter, "is a vowel.")
+    else:
+        print(given_letter, "is not a vowel.")
+else:
+    print("Please enter a single letter.")
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>64. To remove occurrences of "ea" in a string (let's call it l1) in Python, you can use the replace() method. Here's an example:</mark></h1>
+<pre>
+
+<pre>
+
+    l1 = "learning"
+
+# Removing "ea" from l1
+l1 = l1.replace("ea", "")
+
+print(l1)  # Output: lrning
+</pre>
+    
+</pre>
+
+<pre>
+    st1 = "please be seated"
+    st2 = "ea"
+    
+    # Remove st2 from st1
+    
+    modified_st1 = st1.replace(st2, "")
+    
+    print(modified_st1)  # Output: pls b sted
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>63. how to remove "ea" in l1 in python</mark></h1>
+<pre>
+l1 = "learning"
+
+# Counting occurrences of "ea" in l1
+count = l1.count("ea")
+
+print(count)  # Output: 1
+
+
+</pre>
+
+
+<pre>
+    st1 = "please be seated"
+    st2 = "ea"
+    
+    # Count the occurrences of st2 in st1
+    count = st1.count(st2)
+    
+    print(count)  # Output: 2
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>64.List - append </mark></h1>
+<pre>
+    my_list = [1, 2, 3]
+    my_list.append(4)
+    
+    print(my_list)  # Output: [1, 2, 3, 4]
+    
+    my_list = [1, 2, 3]
+    my_list.append(4)
+    
+    print(my_list)  # Output: [1, 2, 3, 4]
+    
+    
+    my_list = [1, 2, 3]
+    my_list.append(4)
+    
+    print(my_list)  # Output: [1, 2, 3, 4]
+    
+    
+    my_list = [1, 2, 3]
+    my_list.append(4)
+    
+    print(my_list)  # Output: [1, 2, 3, 4]
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63.List - Clear  </mark></h1>
+
+<pre>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    my_list.clear()
+
+    print(my_list)  # Output: []
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+
+<h1><mark>64.Using the + operator for concatenation: </mark></h1>
+<pre>
+
+    my_list = [1, 2, 3]
+
+    # Concatenate lists using the + operator
+    my_list = my_list + [4, 5, 6]
+
+    print(my_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+    
+
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63.List - Extend </mark></h1>
+<pre>
+
+    my_list = [1, 2, 3]
+
+    # Append multiple elements using extend()
+    my_list.extend([4, 5, 6])
+    
+    print(my_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>64. list Copy</mark></h1>
+
+<h2>Copy</h2>
+<pre>
+    list1 = [1,3,4,5,7]
+
+    liscop = list(list1)
+    
+    print(liscop)
+
+    </pre>
+
+    <br>
+    <br>
+    <hr>
+<h2>Slicing method in copy </h2>
+
+
+<pre>
+
+    lis1 = [1,3,4,5,6]
+
+    liscop = lis1[:]
+
+    liscop.append(7)
+
+    print(lis1)
+    print(liscop)
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+
+<h1><mark>63.List - Count  </mark></h1>
+<pre>
+    my_list = [1, 2, 2, 3, 2, 4, 2, 5]
+
+    # Count the occurrences of the element 2 in my_list
+    
+    count = my_list.count(2)
+    
+    print(count)  # Output: 4
+
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h2>Count string </h2>
+
+<pre>
+
+lis1 = ["apple", "banana", "orange", "banana", "grape", "banana"]
+
+count = 0 
+for i in lis1:
+    if i == "banana":
+        count += 1
+        print(count)
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>64.List - Extend() </mark></h1>
+<pre>
+    my_list = [1, 2, 3]
+    new_elements = [4, 5, 6]
+    
+    my_list.extend(new_elements)
+    print(my_list)
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63.List - index()</mark></h1>
+<pre>
+
+    my_list = [1, 2, 3, 4, 5, 2]
+
+    index = my_list.index(2)
+    print(index)
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+<h1><mark>64.list - insert ()</mark></h1>
+<pre>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    my_list.insert(2, 10)
+    print(my_list)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63. list - pop()<i></i></mark></h1>
+<pre>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    removed_element = my_list.pop(2)
+    print(my_list)
+    print(removed_element)
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>64. List - remove()</mark></h1>
+<pre>
+
+    my_list = [1, 2, 3, 4, 2, 5]
+
+    my_list.remove(2)
+    print(my_list)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>63. List - reverse()</mark></h1>
+<pre>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    my_list.reverse()
+    print(my_list)
+
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>64. List -sort()</mark></h1>
+<pre>
+
+    my_list = [5, 2, 8, 1, 6]
+
+    my_list.sort()
+    print(my_list)
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>63.dictionary - Clear </mark></h1>
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    my_dict.clear()
+    print(my_dict)
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>64.dictionary - Copy </mark></h1>
+<pre>
+
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    new_dict = my_dict.copy()
+    my_dict['apple'] = 5
+    
+    print(my_dict)
+    print(new_dict)
+    
+</pre>
+
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>65. dictionary  - fromkeys()</mark></h1>
+
+<pre>
+    keys = ['apple', 'banana', 'cherry']
+    default_value = 0
+    
+    my_dict = dict.fromkeys(keys, default_value)
+    print(my_dict) 
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>66. dictionary - get()</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    value = my_dict.get('banana')
+    print(value)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>67. items()</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    items = my_dict.items()
+    print(items)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>68. keys</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    keys = my_dict.keys()
+    print(keys)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>69 . pop()</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    value = my_dict.pop('banana')
+    print(my_dict)
+    print(value)  
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>70 . popitem()</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+    item = my_dict.popitem()
+    print(my_dict)
+    print(item)   
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>71 . setdefault</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2}
+
+    value = my_dict.setdefault('cherry', 3)
+    print(my_dict)
+    print(value)
+</pre>
+<br>
+<br>
+<br>
+
+
+<hr>
+<br>
+<h1><mark>72. update()</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2}
+    other_dict = {'cherry': 3, 'banana': 4}
+
+    my_dict.update(other_dict)
+    print(my_dict)
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>73. values</mark></h1>
+
+<pre>
+    my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}
+
+   values = my_dict.values()
+   print(values)
+</pre>
+
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>74. count()</mark></h1>
+
+<pre>
+
+
+my_dict = {'apple': 1, 'banana': 2, 'cherry': 3, 'orange': 2}
+
+def count_value(dictionary, value):
+    count = 0
+    for val in dictionary.values():
+        if val == value:
+            count += 1
+    return count
+
+result = count_value(my_dict, 2)
+print(result)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>75. index()</mark></h1>
+
+<pre>
+
+
+my_dict = {'apple': 1, 'banana': 2, 'cherry': 3, 'orange': 2}
+
+def find_key(dictionary, value):
+    for key, val in dictionary.items():
+        if val == value:
+            return key
+    return None
+
+result = find_key(my_dict, 2)
+print(result)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>76. Set - add()</mark></h1>
+
+<pre>
+    fruits = {"apple", "banana", "cherry"}
+
+    fruits.add("orange")
+    print(fruits)
+</pre>
+<br>
+<br>
+<br>
+
+<br>
+<hr>
+<h1><mark>77. set - clear()</mark></h1>
+
+<pre>
+    fruits = {"apple", "banana", "cherry"}
+
+    fruits.clear()
+    print(fruits)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>78. set - copy()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = set1.copy()
+
+    print(set1)
+    print(set2)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>79. set - difference()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {3, 4, 5}
+
+    difference_set = set1.difference(set2)
+    print(difference_set)   
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+<h1><mark>80. set - difference_update()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {3, 4, 5}
+
+    set1.difference_update(set2)
+    print(set1)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>81.Set -    discard </mark></h1>
+
+<pre>
+    fruits = {"apple", "banana", "cherry"}
+
+    fruits.discard("banana")
+    print(fruits)
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>82.Set -    insersection()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {2, 3, 4, 5}
+    set3 = {3, 4, 5, 6}
+    
+    intersection_set = set1.intersection(set2, set3)
+    print(intersection_set)
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>83.Set -    intersection_update() </mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {2, 3, 4, 5}
+    set3 = {3, 4, 5, 6}
+    
+    set1.intersection_update(set2, set3)
+    print(set1)  
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>84.Set -    isdisjoint</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4, 5}
+    set2 = {6, 7, 8}
+    set3 = {4, 5, 6, 7, 8}
+
+    print(set1.isdisjoint(set2))  # True
+    print(set1.isdisjoint(set3))  # False
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>85.Set -    issubset</mark></h1>
+
+<pre>
+    
+</pre>
+
+<hr>
+
+<h1><mark>86.Set -   issuperset()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4, 5}
+    set2 = {2, 4}
+    set3 = {1, 2, 3, 4, 5, 6}
+
+    print(set1.issuperset(set2))  
+    print(set1.issuperset(set3)) 
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>87.Set -   pop()</mark></h1>
+
+<pre>
+
+    set1 = {23,42,22,45,65,56,12}
+
+    k = set1.pop()
+
+    print(k)
+    print(set1)
+    
+</pre>
+
+
+
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>88.Set -   remove()</mark></h1>
+
+<pre>
+    my_set = {1, 2, 3, 4, 5}
+
+    my_set.remove(3)
+    print(my_set)
+*******************************************
+
+my_set = {1, 2, 4, 5}
+
+my_set.discard(3)
+print(my_set)
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>89.Set -   symmetric_difference()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {3, 4, 5, 6}
+
+    result_set = set1.symmetric_difference(set2)
+    print(result_set)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>90.Set -   symmetric_difference_update()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3, 4}
+    set2 = {3, 4, 5, 6}
+    
+    set1.symmetric_difference_update(set2)
+    print(set1)   
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>91.Set -   union()</mark></h1>
+
+<pre>
+    set1 = {1, 2, 3}
+    set2 = {3, 4, 5}
+
+    result_set = set1.union(set2)
+    print(result_set)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>92.Set -  update()</mark></h1>
+
+<pre>
+    my_set = {1, 2, 3}
+    new_elements = [4, 5, 6]
+    
+    my_set.update(new_elements)
+    print(my_set)
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+<h1>Python Built in Functions</h1>
+<h1><mark>93. abs()</mark></h1>
+
+
+<pre>
+    absolute_value = abs(-5)
+    print(absolute_value)    
+</pre>
+
+
+
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>94. all()</mark></h1>
+
+<pre>
+    values1 = [True, True, True]
+    print(all(values1))  # Output: True
+    
+    values2 = [True, False, True]
+    print(all(values2))  # Output: False
+    
+    values3 = [1, 2, 3, 4, 5]
+    print(all(values3))  # Output: True
+    
+    values4 = [1, 0, 3, 4, 5]
+    print(all(values4))  # Output: False
+    
+    values5 = "hello"
+    print(all(values5))  # Output: True
+    
+    values6 = "hello world"
+    print(all(values6))  # Output: True
+    
+    values7 = ""
+    print(all(values7))  # Output: True
+</pre>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>95 . any()</mark></h1>
+
+<pre>
+    values1 = [False, False, False]
+print(any(values1))  # Output: False
+
+values2 = [True, False, True]
+print(any(values2))  # Output: True
+
+values3 = [0, 0, 0, 0]
+print(any(values3))  # Output: False
+
+values4 = [0, 1, 0, 0]
+print(any(values4))  # Output: True
+
+values5 = ""
+print(any(values5))  # Output: False
+
+values6 = "hello"
+print(any(values6))  # Output: True
+
+values7 = []
+print(any(values7))  # Output: False
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>96. ascii()</mark></h1>
+
+<pre>
+print(ascii('hello'))  # Output: 'hello'
+
+print(ascii('こんにちは'))  # Output: '\u3053\u3093\u306B\u3061\u306F'
+
+print(ascii('😊'))  # Output: '\U0001f60a'
+
+print(ascii(123))  # Output: '123'
+
+print(ascii([1, 2, 3]))  # Output: '[1, 2, 3]'
+
+print(ascii({'a': 1, 'b': 2}))  # Output: "{'a': 1, 'b': 2}"
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>97. bin()</mark></h1>
+
+<pre>
+print(bin(5))  # Output: '0b101'
+
+print(bin(16))  # Output: '0b10000'
+
+print(bin(255))  # Output: '0b11111111'
+
+print(bin(0))  # Output: '0b0'
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>98. bool()</mark></h1>
+
+<pre>
+    
+</pre>
+<hr>
+
+<h1><mark>99. bytearray()</mark></h1>
+
+<pre>
+    byte_arr1 = bytearray([65, 66, 67])
+    print(byte_arr1)  # Output: bytearray(b'ABC')
+
+    byte_arr2 = bytearray('Hello', 'utf-8')
+    print(byte_arr2)  # Output: bytearray(b'Hello')
+
+    byte_arr3 = bytearray(b'\x41\x42\x43')
+    print(byte_arr3)  # Output: bytearray(b'ABC')
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+<h1><mark>100. bytes()</mark></h1>
+
+<pre>
+    byte_obj1 = bytes([65, 66, 67])
+
+    print(byte_obj1)  # Output: b'ABC'
+    
+    byte_obj2 = bytes('Hello', 'utf-8')
+
+    print(byte_obj2)  # Output: b'Hello'
+    
+    byte_obj3 = bytes(b'\x41\x42\x43')
+
+    print(byte_obj3)  # Output: b'ABC'
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>101. callable()</mark></h1>
+
+<pre>
+    def my_function():
+
+    print("Hello, World!")
+
+print(callable(my_function))  # Output: True
+
+class MyClass:
+    def __call__(self):
+        print("Hello, MyClass!")
+
+obj = MyClass()
+print(callable(obj))  # Output: True
+
+print(callable(5))  # Output: False
+
+print(callable("Hello"))  # Output: False
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>102  chr()</mark></h1>
+
+<pre>
+    print(chr(65))  # Output: 'A'
+
+    print(chr(8364))  # Output: '€'
+
+    print(chr(128516))  # Output: '😄'
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>103. classmethod()</mark></h1>
+
+<pre>
+    class MyClass:
+    def my_class_method(cls, arg1, arg2, ...):
+        # Method implementation
+
+    my_class_method = classmethod(my_class_method) 
+***********************************************************
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    @classmethod
+    def from_diameter(cls, diameter):
+        radius = diameter / 2
+        return cls(radius)
+
+    def area(self):
+        return 3.14159 * self.radius * self.radius
+
+# Using the class method to create a Circle instance
+circle1 = Circle.from_diameter(10)
+print(circle1.radius)  # Output: 5
+print(circle1.area())  # Output: 78.53975
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>104. compile()</mark></h1>
+
+<pre>
+    source_code = """
+x = 10
+y = 20
+sum = x + y
+print(sum)
+"""
+
+compiled_code = compile(source_code, filename='<string>', mode='exec')
+exec(compiled_code)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>105. complex()</mark></h1>
+
+<pre>
+    c1 = complex(2, 3)
+    print(c1)  # Output: (2+3j)
+
+    c2 = complex(4.5, -2.1)
+    print(c2)  # Output: (4.5-2.1j)
+
+    c3 = complex('1.2', '3.4')
+    print(c3)  # Output: (1.2+3.4j)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>106. delattr()</mark></h1>
+
+<pre>
+    class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+person = Person("John", 25)
+print(person.name)  # Output: John
+
+delattr(person, "name")
+print(person.name) 
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>107.dict()</mark></h1>
+
+<pre>
+    # Creating an empty dictionary
+    empty_dict = dict()
+    print(empty_dict)  # Output: {}
+    
+    # Creating a dictionary from a mapping object
+    mapping = {'a': 1, 'b': 2, 'c': 3}
+    dict_from_mapping = dict(mapping)
+    print(dict_from_mapping)  # Output: {'a': 1, 'b': 2, 'c': 3}
+    
+    # Creating a dictionary from an iterable object
+    iterable = [('x', 1), ('y', 2), ('z', 3)]
+    dict_from_iterable = dict(iterable)
+    print(dict_from_iterable)  # Output: {'x': 1, 'y': 2, 'z': 3}
+    
+    # Creating a dictionary from keyword arguments
+    kwargs_dict = dict(name='John', age=25, city='New York')
+    print(kwargs_dict)  # Output: {'name': 'John', 'age': 25, 'city': 'New York'}
+        
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>108. dir()</mark></h1>
+
+<pre>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name}.")
+
+person = Person("John", 25)
+
+print(dir(person))
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>109. divmod()</mark></h1>
+
+<pre>
+print(divmod(10, 3))  # Output: (3, 1)
+print(divmod(15, 4))  # Output: (3, 3)
+print(divmod(8, 2))  # Output: (4, 0)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>110 . enumerate()</mark></h1>
+
+<br> 
+<h2>enumerate(iterable, start=0)</h2>
+
+****************************************************8
+<pre>
+    fruits = ['apple', 'banana', 'cherry']
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+# Output:
+# 0 apple
+# 1 banana
+# 2 cherry
+
+for index, fruit in enumerate(fruits, start=1):
+    print(index, fruit)
+# Output:
+# 1 apple
+# 2 banana
+# 3 cherry
+</pre>
+****************************************************
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>111. eval()</mark></h1>
+
+<pre>
+    result1 = eval("2 + 3 * 4")
+    print(result1)  # Output: 14
+
+    x = 5
+    result2 = eval("x + 10")
+    print(result2)  # Output: 15
+
+    expression = "len([1, 2, 3])"
+    result3 = eval(expression)
+    print(result3)  # Output: 3
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>112. exec()</mark></h1>
+
+<pre>
+    # Example 1: Executing a simple code snippet
+code1 = """
+x = 10
+y = 20
+sum = x + y
+print(sum)
+"""
+
+exec(code1)
+# Output: 30
+
+# Example 2: Executing a loop
+code2 = """
+for i in range(5):
+    print(i)
+"""
+
+exec(code2)
+# Output: 0 1 2 3 4
+
+# Example 3: Executing code with access to external variables
+z = 5
+code3 = """
+result = z * 2
+print(result)
+"""
+
+exec(code3)
+# Output: 10
+
+
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>113. filter()</mark></h1>
+<h1>filter(function, iterable)</h1>
+
+<pre>
+**********************************************************************
+    def is_even(num):
+    
+    return num % 2 == 0
+
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    even_numbers = filter(is_even, numbers)
+    
+    print(list(even_numbers))  # Output: [2, 4, 6, 8, 10]    
+
+*********************************************************************
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>114. format()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>115. frozenset()</mark></h1>
+
+<h2>print only uniq number</h2>
+<pre>
+    
+
+**********************************
+num = [2,3,3,4,4,45,6,7,8,9]
+
+var =   frozenset(num)
+
+print(var)
+******************************************
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>116.getattr()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>117.globals()</mark></h1>
+
+<pre>
+x = 42
+y = "Hello"
+
+def my_function():
+    z = 3.14
+    print(globals())
+
+my_function()
+    
+
+output : {'x': 42, 'y': 'Hello', 'my_function': <function my_function at 0x...>}
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1><mark>118.hasattr()</mark></h1>
+
+<pre>
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1><mark>119. hash()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+
+<h1><mark>120.help()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><mark>121.hex()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>122. isinstance()</mark></h1>
+
+<pre>
+    <h2>isinstance(object, type)</h2>
+
+********************************************************************8
+
+a = [2,2.4,"Mari"]
+
+for i in a:
+    
+    if isinstance(i,int):
+        
+        print(i,"a is integer")
+        
+    elif isinstance(i,float):
+        
+        print(i ,"a is float")
+        
+    elif isinstance(i,str):
+        
+        print(i,"a is string")
+        
+    else:
+        pass
+
+
+Output :- 
+
+2 a is integer
+2.4 a is float
+Mari a is string
+**************************************************************
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>123. issubclass()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+
+<h1><mark>124. iter()</mark></h1>
+<h3> iter(iterable, sentinel)</h3>
+<pre>
+    my_list = [1, 2, 3, 4, 5]
+    my_iterator = iter(my_list)
+    
+    print(next(my_iterator))  # Output: 1
+    print(next(my_iterator))  # Output: 2
+    print(next(my_iterator))  # Output: 3
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>125. len()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>126. locals()</mark></h1>
+
+<pre>
+    def my_function():
+    name = "Alice"
+    age = 30
+    print(locals())
+
+my_function()
+
+output : {'name': 'Alice', 'age': 30}
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>127. map()</mark></h1>
+
+<h1>map(function, iterable1, iterable2, ...)</h1>
+
+<pre>
+def square(x):
+    return x ** 2
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+
+print(list(squared_numbers))  
+</pre>
+
+
+<br>
+<br>
+
+<br>
+<br>
+<h1><mark>128. max()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1><mark>129. memoryview()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+
+<br>
+<br>
+<h1><mark>130.next() </mark></h1>
+
+<pre>
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>131. object()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>132. oct()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>133. open()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>134. ord()</mark></h1>
+<li>ord(character)</li>
+<pre>
+    
+</pre>
+
+<ul><h3>
+    <li>The ord() function is a built-in function in Python that returns the Unicode code point of a specified character.</li>
+    <li> It takes a single character (string of length 1) as an argument and returns an integer representing its Unicode code point.</li>
+
+</h3></ul>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>135. pow()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>136. property()</mark></h1>
+
+<pre>
+
+</pre>
+
+<ul><h3>
+    <li>The property() function is a built-in function in Python that is used to create properties for class attributes.</li>
+    <li> It allows you to define methods that can be accessed like <br>
+        attributes, providing a way to control the behavior of attribute access, assignment, and deletion.</li>
+        <li>The property() function can be used as a decorator or as a regular function. </li>
+        <li>When used as a decorator, it allows you to define a getter, setter, and deleter for an attribute</li>
+        <li>When used as a decorator, it allows you to define a getter, setter, and deleter for an attribute</li>
+</h3></ul>
+<br>
+<br>
+<hr>
+<h1><mark>137. range()</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>138.repr()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>139. reversed()</mark></h1>
+
+<h3>reversed(sequence)</h3>
+
+<pre>
+numbers = [1, 2, 3, 4, 5]
+
+reversed_numbers = reversed(numbers)
+
+for number in reversed_numbers:
+    print(number)
+
+    output : 5,4,3,2,1
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>140.round()</mark></h1>
+
+<pre>
+x = 3.7
+rounded_x = round(x)
+print(rounded_x)
+
+output : 4
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>141. setattr()</mark></h1>
+
+<h3>setattr(object, attribute, value)</h3>
+
+
+
+<pre>
+class Person:
+    pass
+
+person = Person()
+setattr(person, "name", "Alice")
+
+print(person.name)  # Output: "Alice"
+</pre>
+
+<ul><h3>
+    <li> It allows you to dynamically set or modify an attribute of an object at runtime.</li>
+    <li> object: It specifies the object on which to set the attribute.</li>
+    <li>object: It specifies the object on which to set the attribute.</li>
+    <li>value: It specifies the value to assign to the attribute.</li>
+</h3></ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>142. slice()</mark></h1>
+
+<pre>
+    lis1 = [2,4,3,6,6,4,5,6,2,1]
+
+    mslice = slice(4,6)
+    
+    text = lis1[mslice]
+    
+    print(text)
+
+    output : [6, 4]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>143. sorted()</mark></h1>
+
+<pre>
+num = [2,4,2,34,4,3,2,2,2,2,5]
+
+text = sorted(num)
+
+print(text)
+
+output : [2, 2, 2, 2, 2, 2, 3, 4, 4, 5, 34]
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>144. staticmethod()</mark></h1>
+
+<pre>
+    class MathUtils:
+
+    @staticmethod
+
+    def add_numbers(a, b):
+
+        return a + b
+
+result = MathUtils.add_numbers(3, 5)
+
+print(result)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>145. str()</mark></h1>
+
+<pre>
+number = 42
+string_number = str(number)
+print(string_number)
+
+output : 42
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>146. sum()</mark></h1>
+
+<pre>
+num = [2,5,6,7,8]
+
+start = 12
+
+total = sum(num,start)
+
+print(total)
+
+
+output : 40 
+
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>147. super()</mark></h1>
+
+<pre>
+class Parent:
+
+    def __init__(self, name):
+
+        self.name = name
+
+    def greet(self):
+
+        print(f"Hello, {self.name}!")
+
+class Child(Parent):
+
+    def __init__(self, name, age):
+
+        super().__init__(name)
+
+        self.age = age
+
+    def greet(self):
+
+        super().greet()
+
+        print(f"I am {self.age} years old.")
+
+child = Child("Alice", 5)
+
+child.greet()
+
+
+Output:
+
+css
+Copy code
+Hello, Alice!
+I am 5 years old.
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+
+<h1><mark>148. vars()</mark></h1>
+
+<pre>
+class Person:
+    def __init__(self, name, age):
+
+        self.name = name
+
+        self.age = age
+
+person = Person("Alice", 25)
+
+attributes = vars(person)
+
+print(attributes)
+
+
+output : {'name': 'Alice', 'age': 25}
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>149. zip()</mark></h1>
+
+<pre>
+    num = [9,3,6,0]
+
+    text = ['M','A','R','I']
+    
+    zipped = zip(num , text)
+    
+    print(zipped)
+    
+    print(list(zipped)) 
+
+
+   output : <zip object at 0x7f0ff4334800>
+            [(9, 'M'), (3, 'A'), (6, 'R'), (0, 'I')]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1>Python String Methods</h1>
+
+
+<h1><mark>150 . capitalize()</mark></h1>
+<h3>string.capitalize()</h3>
+<pre>
+text = "hello, world!"
+
+capitalized_text = text.capitalize()
+
+print(capitalized_text)
+
+output : Hello, world!
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>151. casefold()</mark></h1>
+<h3>string.casefold()</h3>
+<pre>
+    text = "Hello, WORLD!"
+    casefolded_text = text.casefold()
+    print(casefolded_text)
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>152. center()</mark></h1>
+
+<h3>string.center(width, fillchar)</h3>
+
+<pre>
+    text = "Hello"
+    centered_text = text.center(10)
+    print(centered_text)
+    
+    
+    output : Hello   
+</pre>
+
+<pre>
+
+text = "Hello"
+centered_text = text.center(10, "*")
+print(centered_text)
+
+output : **Hello***
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>153. count()</mark></h1>
+
+<pre>
+text = "Hello, World!"
+
+count = text.count("o", 5, 10)
+
+print(count)
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>154. encode()</mark></h1>
+
+<pre>
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>155. endswith()</mark></h1>
+
+<pre>
+    
+text = "Hello, World!"
+
+result = text.endswith("Hello", 0, 5)
+
+print(result)
+
+
+output : True
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<h1><mark>156. expandtabs()</mark></h1>
+
+<pre>
+
+    name = "Hello\tMariyappan"
+
+    s = name.expandtabs()
+
+    print(s)
+
+    output : Hello   Mariyappan
+    
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>157. find()</mark></h1>
+
+<pre>
+    name = "Mariyappan"
+
+    s = name.find("a",2)
+
+    print(s)
+
+    output : 5
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>158 . format()</mark></h1>
+
+<pre>
+    name = "mariyappan"
+
+    age = 29
+
+    city = "Trichy"
+
+    line = "My name {} and age {} and location {}".format(name,age,city)
+
+    print(line)
+
+    output : My name mariyappan and age 29 and location Trichy
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>159 . format_map()</mark></h1>
+
+<pre>
+    data = {"name":"Mariyappan", "age":29, "City":"Trichy"}
+
+    line = "My name is {name} my age {age} staying in {City}"
+
+    for_text = line.format_map(data)
+
+    print(for_text)
+
+
+    output : My name is Mariyappan my age 29 staying in Trichy
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>160. index()</mark></h1>
+<h3>string.index(substring, start, end)</h3>
+<pre>
+
+
+text = "Hello, world!"
+index = text.index("o")
+print(index)
+
+output : 4 
+
+
+text = "Hello, world!"
+index = text.index("o", 5, 12)
+print(index)
+
+output : 8 
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>161. isalnum()</mark></h1>
+<h3>string.isalnum()</h3>
+<pre>
+ 
+text1 = "Hello123"  # Contains alphanumeric characters
+
+text2 = "Hello 123"  # Contains non-alphanumeric characters
+
+print(text1.isalnum())  # Output: True
+
+print(text2.isalnum())  # Output: False
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>162. isalpha()</mark></h1>
+<h3>string.isalpha()</h3>
+<pre>
+    text1 = "Hello"  # Contains alphabetic characters
+    text2 = "Hello123"  # Contains non-alphabetic characters
+    
+    print(text1.isalpha())  # Output: True
+    print(text2.isalpha())  # Output: False  
+</pre>
+
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<hr>
+<h1><mark>163. isascii()</mark></h1>
+
+<pre>
+    
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>164 . isdecimal()</mark></h1>
+
+<pre>
+    name = "93.60"
+    k = name.isdecimal()
+    print(k)   
+
+    output : False
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>165. isdigit()</mark></h1>
+
+<pre>
+name = "9360927615"
+k = name.isdigit()
+print(k)
+
+output : True
+</pre>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><mark>166. isidentifier()</mark></h1>
+
+<pre>
+    name = "mariyappan"
+
+    k = name.isidentifier()
+    
+    print(k)
+    output : True
+</pre>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>167. islower()</mark></h1>
+
+<pre>
+    name = "mariyappan"
+
+    k = name.islower()
+    
+    print(k)  
+
+    output : True
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>168. isnumeric()</mark></h1>
+
+<pre>
+    name = "9360927615"
+
+    k = name.isnumeric()
+    
+    print(k)  
+
+    output : True
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>169.isprintable()</mark></h1>
+
+<h3>string.isprintable()</h3>
+<pre>
+    text1 = "Hello, world!"  # Contains printable characters
+
+    text2 = "Hello\nworld!"  # Contains a newline character
+
+    print(text1.isprintable())  # Output: True
+
+    print(text2.isprintable())  # Output: False
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>170. isspace()</mark></h1>
+<h3>string.isspace()</h3>
+<pre>
+    text1 = "   "  # Contains only whitespace characters
+
+    text2 = "  Hello  "  # Contains whitespace and non-whitespace characters
+    
+    print(text1.isspace())  # Output: True
+
+    print(text2.isspace())  # Output: False
+
+print(k)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>171 . istitle()</mark></h1>
+
+<pre>
+
+name = "Hello ,Mariyappan"
+
+k = name.istitle()
+
+print(k)
+
+output : True
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>172. isupper()</mark></h1>
+
+<pre>
+    name = "MARIYAPPAN"
+
+    k = name.isupper()
+    
+    print(k)
+
+    output : True
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+<h1><mark>173. join()</mark></h1>
+
+<pre>
+    name = "Mariyappan"
+
+    k =",".join(name)
+    
+    print(k)   
+
+    output : M,a,r,i,y,a,p,p,a,n
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>174 . ljust()</mark></h1>
+
+<pre>
+    name = "Mariyappan"
+
+    k =name.ljust(20 ,"&")
+    
+    print(k) 
+
+    output : Mariyappan&&&&&&&&&&
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>175 . lower()</mark></h1>
+
+<pre>
+name = "HELLO , MARIYAPPAN"
+
+k = name.lower()
+
+print(k)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>176. lstrip()</mark></h1>
+
+<pre>
+name = "      Hello , Mariyappan"
+
+k = name.lstrip()
+
+print(k)
+
+output : Hello , Mariyappan
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>177. maketrans()</mark></h1>
+
+<pre>
+    name = "please be seated"
+
+    s = str.maketrans("ea","ka")
+
+    out = name.translate(s)
+
+    print(out)
+</pre>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>178. partition()</mark></h1>
+
+<pre>
+    name = "Hello, Mariyappan, How are you"
+
+    k = name.partition(",")
+    
+    print(k)
+
+    output : ('Hello', ',', ' Mariyappan, How are you')
+</pre>
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>179. replace()</mark></h1>
+
+<pre>
+    name = "Mariyappan"
+
+    k = name.replace("a", "")
+    
+    print(k)  
+
+    output : Mriyppn
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>180. rfind()</mark></h1>
+
+<pre>
+name = "Mariyappan"
+
+k = name.rfind('a',0,4)
+
+print(k)
+
+output : 1
+</pre>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>181. rindex()</mark></h1>
+<h3>string.rindex(substring, start, end)</h3>
+<pre>
+    name = "Mariyappan"
+
+    k = name.rindex('a',0,4)
+
+    print(k)
+    output : 1
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>182. rjust()</mark></h1>
+
+<pre>
+    Name =" Mariyappan"
+
+    k = Name.ljust(20,"*")
+    s = Name.rjust(15,"&")
+
+
+    print(k)
+    print(s)
+
+    output : 
+
+    Mariyappan*********
+    &&&& Mariyappan
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><mark>183. rpartition()</mark></h1>
+
+<pre>
+
+    name = "Hello , Mariyappan , How are you "
+
+    l = k = name.partition(",")
+
+    k = name.rpartition(",")
+
+    l = k = name.partition(",")
+
+    print(k)
+
+    print(l)
+
+
+    output :
+
+    ('Hello ', ',', ' Mariyappan , How are you ')
+    ('Hello ', ',', ' Mariyappan , How are you ')
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>184. rsplit()</mark></h1>
+
+
+<h3>string.rsplit(separator, maxsplit)</h3>
+
+<pre>
+    name = "hello , Mariyappan ,How are you"
+
+    k = name.rsplit(",",2)
+    
+    print(k)
+
+    Output : 
+
+    ['hello ', ' Mariyappan ', 'How are you']
+</pre>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>185. rstrip()</mark></h1>
+
+<pre>
+    name = "Hello Mariyappan +++++++++++"
+
+    k = name.rstrip("+")
+    
+    print(k) 
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>186. split()</mark></h1>
+
+<pre>
+name = "Hello, Mariyappan, How are you?"
+
+k = name.split(",")
+
+print(k)
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>187. splitlines()</mark></h1>
+
+<pre>
+    name = "Hello\nMariyappan\nHow are you"
+
+    k = name.splitlines()
+    print(k)
+</pre>
+
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>188.</mark></h1>
+
+<pre>
+    
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>189. startswith()</mark></h1>
+
+<pre>
+    name = "Hello ,Mariyappan"
+
+    k = name.startswith("Hello")
+
+    g = name.startswith("Mariyappan")
+
+    print(k)
+
+    print(g)
+</pre>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><mark>190. strip()</mark></h1>
+
+<pre>
+    name = "------Hello ,Mariyappan------"
+
+    k = name.strip("-")
+
+    print(k)
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+
+<h1><mark>191. swapcase()</mark></h1>
+
+<pre>
+    name = "Hello ,Mariyappan"
+
+    k = name.swapcase()
+    print(k)
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<hr>
+<h1><mark>192. title()</mark></h1>
+
+<pre>
+    name = "Hello ,Mariyappan"
+
+    k = name.title()
+    print(k)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>193.translate()</mark></h1>
+<h3>string.translate(translation_table)</h3>
+<pre>
+name = "Mariyappan"
+
+s = str.maketrans('ae','kk')
+k = name.translate(s)
+print (k)
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>194. upper()</mark></h1>
+
+<pre>
+name = "Mariyappan"
+
+s = name.upper()
+print (s)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>195. zfill()</mark></h1>
+
+<u>string.zfill(width)</u>
+<br>
+<br>
+<ul><h3>
+    <li>The zfill() method is a string method in Python that pads a string with zeros (0)<br>
+        on the left side to achieve a specified width.</li>
+           <li></li>
+</h3></ul>
+
+
+<pre>
+    number = "42"
+    padded_number = number.zfill(5)
+    print(padded_number)  # Output: "00042"
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>196.How to delete a key from a dictionary?</mark></h1>
+
+<pre>
+    my_dict = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+
+    del my_dict['key2']
+
+    print(my_dict)
+</pre>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>197.How to remove item from list</mark></h1>
+
+<pre>
+    my_list = [1, 2, 3, 4, 5]
+
+    my_list.remove(3)
+
+    print(my_list)  # Output: [1, 2, 4, 5]
+</pre>
+
+<pre> <u> The del statement removes an item at a specific index from the list.</u>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    del my_list[2]
+
+    print(my_list)  # Output: [1, 2, 4, 5]
+
+</pre>
+
+<pre> <u>   The del statement removes an item at a specific index from the list.</u>>
+ 
+    my_list = [1, 2, 3, 4, 5]
+
+    my_list.pop(2)
+
+    print(my_list)  # Output: [1, 2, 4, 5]
+</pre>
+
+
+<pre> <u>Using a List Comprehension:</u>
+
+    my_list = [1, 2, 3, 4, 5]
+
+    items_to_remove = [2, 4]
+
+    my_list = [item for item in my_list if item not in items_to_remove]
+
+    print(my_list)  # Output: [1, 3, 5]
+
+
+</pre>
+
+<pre> <u>Using a Loop</u>
+    
+
+my_list = [1, 2, 3, 4, 5]
+
+items_to_remove = [2, 4]
+
+for item in items_to_remove:
+
+    if item in my_list:
+
+        my_list.remove(item)
+
+print(my_list)  # Output: [1, 3, 5]
+
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<h1><mark>198.What is a decorator in python?</mark></h1>
+
+<pre>
+def decorator(func):
+
+    def wrapper(*args, **kwargs):
+
+        print("Before function execution")
+
+        result = func(*args, **kwargs)
+
+        print("After function execution")
+
+        return result
+
+    return wrapper
+
+@decorator
+
+def my_function():
+
+    print("Inside my_function")
+
+my_function()  
+
+
+
+output :
+
+Before function execution
+
+Inside my_function
+
+After function execution
+</pre>
+
+<hr>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>199.What is a list comprehension in python</mark></h1>
+
+<h1>[expression for item in iterable if condition]</h1>
+<pre>
+    numbers = [1, 2, 3, 4, 5]
+
+    squared_numbers = [x**2 for x in numbers if x % 2 == 0]
+    
+    print(squared_numbers)
+
+    output : [4,16]
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>200.What is a lambda function in python</mark></h1>
+
+<h1>lambda arguments: expression</h1>
+<pre>
+    
+add = lambda x, y: x + y
+
+
+numbers = [1, 2, 3, 4, 5]
+
+squared_numbers = list(map(lambda x: x**2, numbers))
+
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+</pre>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1><mark>201. What is a dictionary comprehension in python</mark></h1>
+
+<pre>
+num = [2,3,4,5,6,7,8]
+
+squ_dic = {x**2 for x in num  if x%2==0}
+
+print(squ_dic)
+</pre>
+
+
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<h1><mark>202. To find duplicate values in a string in Python,<br>
+    a ="aabbcrriiissddd" how to find duplicate value in a string in python</mark></h1>
+
+
+
+
+<pre>
+
+def func(string):
+    
+    value_count = {}
+    
+    duplicate = []
+    
+    for i in string:            # Count occurrences of each value
+        
+        if i in value_count :
+            
+            value_count[i] +=1
+            
+        else:
+            
+            value_count[i] = 1
+            
+    for x,y in value_count.items():
+        
+        if y > 1:
+            
+            duplicate.append(x)
+            
+            
+    return duplicate
+    
+string = "aaabbcccrrfff"
+
+dup_value =    func(string)
+
+print("Dup values",dup_value)
+   
+</pre>
+
+<hr>
+<h1><mark>203. find duplicate values occurence in a string</mark>
+
+
+<pre>
+def dup_count(string):
+
+    value_count = {}
+    
+    duplicates = []
+
+    # Count occurrences of each value
+    
+    
+    for value in string:
+        
+        if value in value_count:
+            
+            value_count[value] += 1
+            
+        else:
+            
+            value_count[value] = 1
+
+    # Find duplicates and their occurrences
+    
+    
+    for value, count in value_count.items():
+        
+        if count > 1:
+            
+            duplicates.append((value, count))
+
+    return duplicates
+
+# Example usage
+
+
+string = "aabbcrriiissddd"
+
+
+duplicate_values = dup_count(string)
+
+
+print("Duplicate values and their occurrences:")
+
+for value, count in duplicate_values:
+
+    print(f"Value: {value}, Occurrences: {count}")
+
+
+</pre>
+
+<h1><mark>204.Write a program to take a input
+
+    string from user and also take
+    
+    the sub string size from the user Print the possible
+    
+    Unique sub strings and its Occurrence count as below.<br><br>
+    <br>
+    Sample Input:
+    
+    Enter a string: ababcdbc<br><br>
+    
+    Enter sub string size: 2<br><br>
+    
+    Output:<br>
+    
+    Occurrences:   ab-2, bc-2, ba-1,
+    
+    cd-1, db-1<br>
+    ?</mark></h1> 
+
+
+
+    <pre>
+        def find_unique_substrings(input_string, sub_string_size): 
+        
+        substr_count = {}
+        
+        for i in range(len(input_string) - sub_string_size + 1):
+            
+            substring = input_string[i:i + sub_string_size]
+            
+            if substring in substr_count:
+                
+                substr_count[substring] += 1
+                
+            else:
+                
+                substr_count[substring] = 1
+                
+    
+        unique_substrings = [f"{substring}-{count}" for substring, count in substr_count.items() if count > 1]
+        
+        return unique_substrings
+    
+    if __name__ == "__main__":
+        
+        input_string = input("Enter a string: ")
+        
+        sub_string_size = int(input("Enter sub string size: "))
+    
+        unique_substrings = find_unique_substrings(input_string,
+        sub_string_size)
+        
+        output = ", ".join(unique_substrings)
+    
+        print("Occurrences:", output)
+
+
+    </pre>
+
+
+
+
+
+
+ 
+ 
+<hr>
+</h1>
+
+</body>
+</html>
+
